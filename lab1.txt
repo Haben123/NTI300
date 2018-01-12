@@ -1,6 +1,7 @@
-#!/bin/bash
 sudo yum install httpd
 sudo systemctl enable httpd
 sudo systemctl start httpd
 sudo yum install mod_ssl
 sudo systemctl restart httpd
+echo -e "<html> \n<h1> welcom, NTI-300 </h2> \n</html>" > /var/www/html/index.html
+sed -i 's/^/#/g' /etc/httpd/conf.d/welcome.conf
