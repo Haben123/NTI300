@@ -1,7 +1,16 @@
-sudo yum install httpd
-sudo systemctl enable httpd
-sudo systemctl start httpd
-sudo yum install mod_ssl
-sudo systemctl restart httpd
-echo -e "<html> \n<h1> welcom, NTI-300 </h2> \n</html>" > /var/www/html/index.html
+sudo yum install httpd            #command helps to install apache
+sudo systemctl enable httpd       # Enable Apache to start at boot
+sudo systemctl start httpd        #start Apache
+sudo yum install mod_ssl          #install mod_ssl
+sudo systemctl restart httpd      # to restart your appache   
+echo -e "<html> \n<h1> welcom, NTI-300 </h2> \n</html>" > /var/www/html/index.html  #will print welcome, NTI-300 to the website heading 
+sed -i 's/^/#/g' /etc/httpd/conf.d/welcome.conf      #run the script
+
+#!/bin/bash
+yum -y install httpd           #command helps to install apache
+systemctl enable httpd         # Enable Apache to start at boot
+systemctl restart httpd        # to restart your appache
+yum -y install mod_ssl         #install mod_ssl
+systemctl restart httpd        # to restart your appache
+echo -e "<html> \n<h1> welcome, NTI-300 </h1> \n<h2> yay, I'am having so much fun with linux</h2> \n</html>" > /var/www/html/index.html
 sed -i 's/^/#/g' /etc/httpd/conf.d/welcome.conf
