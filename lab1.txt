@@ -1,3 +1,4 @@
+#!/bin/bash        #the script should always be run with bash,
 sudo yum install httpd            #command helps to install apache
 sudo systemctl enable httpd       # Enable Apache to start at boot
 sudo systemctl start httpd        #start Apache
@@ -6,7 +7,7 @@ sudo systemctl restart httpd      # to restart your appache
 echo -e "<html> \n<h1> welcom, NTI-300 </h2> \n</html>" > /var/www/html/index.html  #will print welcome, NTI-300 to the website heading 
 sed -i 's/^/#/g' /etc/httpd/conf.d/welcome.conf      #run the script
 
-#!/bin/bash
+#!/bin/bash        #the script should always be run with bash,
 yum -y install httpd           #command helps to install apache
 systemctl enable httpd         # Enable Apache to start at boot
 systemctl restart httpd        # to restart your appache
