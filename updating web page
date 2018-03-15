@@ -1,0 +1,2 @@
+echo -e "<html> \n<h1> welcom, NTI-300 </h2> \n</html>" > /var/www/html/index.html  #will print welcome, NTI-300 to the website heading 
+sed -i 's/^/#/g' /etc/httpd/conf.d/welcome.conf      #run the script
